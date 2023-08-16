@@ -85,8 +85,10 @@ const phrases = [`<p class="number map__number">I.</p>
 <p class="text map__title">Счастье </br>— лететь, куда хочешь.</p>`, `<p class="number map__number">V.</p>
 <p class="text map__title">Счастье </br>— странствовать по миру.</p>`]
 
+const windowWidth = window.innerWidth;
+
 let items = document.querySelectorAll('.map__item');
-if (items.length > 0) {
+if (windowWidth>=1000 && items.length > 0) {
     for (let i = 0; i < items.length; i++) {
         items[i].addEventListener('mouseenter', (e) => {
             items[i].innerHTML = quotes[i];
